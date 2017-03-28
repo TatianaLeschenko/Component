@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Component</title>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header></header>
+    <main>
+    	<div class="component">
+    		<button class="cn-button">+</button>
+    		<div class="cn-wrapper" >
+    			<ul>
+    				<li><a href="#" class="icon-image"></a></li>
+    				<li><a href="#" class="icon-headphones"></a></li>
+    				<li><a href="#" class="icon-home"></a></li>
+    				<li><a href="#" class="icon-video-camera"></a></li>
+    				<li><a href="#" class="icon-envelop"></a></li>
+    			</ul>
+    		</div>
+    		<span class="cn-overlay"></span>
+    	</div>
+    </main>
+    	<script type="text/javascript">
+			$(document).ready(function(){
+				$('button').click(function(){
+					if($('.cn-wrapper').hasClass('open')) {
+						$(this).text('+');
+					    $('.cn-wrapper').removeClass('open');
+						$('.cn-overlay').removeClass('open');
+					} else {
+						$(this).text('-');
+						$('.cn-wrapper').addClass('open');
+						$('.cn-overlay').addClass('open');
+					}
+				});
+			$(document).click(function(e){
+                  if($(e.target).hasClass('cn-overlay')){
+  		    		$('button').text('+');
+  		    		$('.cn-wrapper').removeClass('open');
+				    $('.cn-overlay').removeClass('open');
+		      	}
+		       });
+		    });
+		    
+		   </script>
+    </body>
+</html>

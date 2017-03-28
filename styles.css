@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Nunito Sans', Arial, sans-serif;
+	font-size: 13px;
+	background: #99bee4;
+    color: #184879;
+    text-decoration: none;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/fonts/icomoon.eot?2129ii');
+  src:  url('fonts/fonts/icomoon.eot?2129ii#iefix') format('embedded-opentype'),
+    url('fonts/fonts/icomoon.ttf?2129ii') format('truetype'),
+    url('fonts/fonts/icomoon.woff?2129ii') format('woff'),
+    url('fonts/fonts/icomoon.svg?2129ii#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cn-wrapper {
+	position: fixed;
+    height: 26em;
+    width: 26em;
+    bottom: -13em;
+    left: 50%;
+    margin-left: -13em;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transform: scale(.1);
+    -ms-transform: scale(.1);
+    -moz-transform: scale(.1);
+    transform: scale(0.1);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    pointer-events: none;
+}
+
+
+.component button {
+	border: none;
+    outline: none;
+    background: none;
+    font-size: 1.8em;
+    background: #fff;
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 50%;
+    position: fixed;
+    left: 50%;
+    margin-left: -1.75em;
+    bottom: -1.75em;
+    padding-bottom: 1em;
+    cursor: pointer;
+    color: #99afc5;
+    z-index: 1;
+    outline: none;
+}
+.cn-button:hover,
+.cn-button:active,
+.cn-button:focus {
+    color: #2b87e3;
+}
+
+.cn-wrapper ul {
+	position: relative;
+	margin: 0;
+	padding: 0;
+    list-style: none;
+}
+.cn-wrapper ul li {
+    position: absolute;
+     overflow: hidden;
+    width: 10em;
+    height: 10em;
+    font-size: 1.5em;
+    left: 50%;
+    margin-top: -1.3em;
+    margin-left: -10em;
+    background: #9ac4ef;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transition: border .3s ease;
+    -moz-transition: border .3s ease;
+    transition: border .3s ease;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+     transition: background-color 0.5s;
+
+}
+.cn-wrapper li a {
+    display: block;
+     height: 14.5em;
+    width: 14.5em;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -7.25em;
+    right: -7.25em;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.9;
+    padding-top: 16px;
+    -webkit-transform: skew(-50deg) rotate(-70deg);
+    -ms-transform: skew(-50deg) rotate(-70deg);
+    -moz-transform: skew(-50deg) rotate(-70deg);
+    transform: skew(-50deg) rotate(-70deg);
+
+}
+.cn-wrapper li:first-child {
+	-webkit-transform: rotate(-10deg) skew(50deg);
+    -ms-transform: rotate(-10deg) skew(50deg);
+    -moz-transform: rotate(-10deg) skew(50deg);
+    transform: rotate(-10deg) skew(50deg);
+}
+.cn-wrapper li:nth-child(2) {
+	-webkit-transform: rotate(30deg) skew(50deg);
+    -ms-transform: rotate(30deg) skew(50deg);
+    -moz-transform: rotate(30deg) skew(50deg);
+    transform: rotate(30deg) skew(50deg);
+}
+.cn-wrapper li:nth-child(3) {
+   -webkit-transform: rotate(70deg) skew(50deg);
+    -ms-transform: rotate(70deg) skew(50deg);
+    -moz-transform: rotate(70deg) skew(50deg);
+    transform: rotate(70deg) skew(50deg);
+}
+.cn-wrapper li:nth-child(4) {
+    -webkit-transform: rotate(110deg) skew(50deg);
+    -ms-transform: rotate(110deg) skew(50deg);
+    -moz-transform: rotate(110deg) skew(50deg);
+    transform: rotate(110deg) skew(50deg);
+}
+.cn-wrapper li:last-child {
+   -webkit-transform: rotate(150deg) skew(50deg);
+    -ms-transform: rotate(150deg) skew(50deg);
+    -moz-transform: rotate(150deg) skew(50deg);
+    transform: rotate(150deg) skew(50deg);
+}
+.cn-wrapper li:nth-child(odd) {
+	background: #99bee4;
+}
+
+.cn-wrapper.open {
+	 -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+	transform: scale(1);
+	pointer-events: auto;
+}
+.cn-overlay{
+    position: fixed;
+    background: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.cn-overlay.open {
+   visibility: visible;
+   opacity: 1;
+}
+a:before {
+    content: "";
+	font-family:'icomoon';
+    font-size: 1.1em;
+	color: #fff;
+}
+.icon-home:before {
+  content: "\e900";
+}
+.icon-image:before {
+  content: "\e90d";
+}
+.icon-headphones:before {
+  content: "\e910";
+}
+.icon-video-camera:before {
+  content: "\e914";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.cn-wrapper li:hover {
+    background-color: #4fa4f9;
+   /* transition: background-color 0.5s;*/
+}
